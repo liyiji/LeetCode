@@ -9,9 +9,9 @@ My E-mail address is liyiji.vip$gmail.com (Please change '$' to '@').
 
 ==
 OTHERS_THINKING 代表我自己没想出来最好的解决办法，然后看了别人的解决思路之后，照着实现的
-==
+--
 NOT_GOOD 代表我所提供的解答可以在LeetCode上达到"Accept"的效果，但是明显不是好的解决办法
-==
+--
 几个NOT_GOOD的解答的说明
 
 ==
@@ -55,6 +55,10 @@ unsigned long long是一个 dirty fix
 可以 in space 的解决这个问题的，但是比较麻烦。我用了 extra space，如果不用就更好了。
 
 ==
+085 Search in Rotated Sorted Array II
+
+图省事，完全就是遍历了一遍……我忏悔
+
 ==
 ==
 ==
