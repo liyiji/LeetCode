@@ -62,6 +62,10 @@ unsigned long long是一个 dirty fix
 图省事，完全就是遍历了一遍……我忏悔
 
 ==
+098 Set Matrix Zeroes
+
+题目要求使用"constant space"，我只能想到O(m)的。还有优化的空间
+
 ==
 ==
 ==
