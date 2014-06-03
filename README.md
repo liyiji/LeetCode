@@ -8,6 +8,10 @@ Please feel free to contact me via E-mail to discuss any problems.
 My E-mail address is liyiji.vip$gmail.com (Please change '$' to '@').
 
 ==
+OTHERS_THINKING 代表我自己没想出来最好的解决办法，然后看了别人的解决思路之后，照着实现的
+NOT_GOOD 代表我所提供的解答可以在LeetCode上达到"Accept"的效果，但是明显不是好的解决办法
+
+==
 几个NOT_GOOD的解答的说明
 
 ==
