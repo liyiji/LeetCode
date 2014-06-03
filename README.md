@@ -46,6 +46,10 @@ unsigned long long是一个 dirty fix
 unsigned long long是一个 dirty fix
 
 ==
+070 Simplify Path
+
+可以 in space 的解决这个问题的，但是比较麻烦。我用了 extra space，如果不用就更好了。
+
 ==
 ==
 ==
