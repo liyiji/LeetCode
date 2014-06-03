@@ -22,3 +22,6 @@ My E-mail address is liyiji.vip$gmail.com (Please change '$' to '@').
 
 046 First Missing Positive
 遍历了两遍，而且使用了O(n)的extra space。虽然也是O(n)的时间复杂度，但是我想会不会有只遍历1遍且尽量少的使用extra space的解决方案？
+
+064 Jump Game II
+if (minStep[i] == 2) 这句是一个 dirty fix
