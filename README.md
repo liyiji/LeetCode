@@ -10,7 +10,7 @@ My E-mail address is liyiji.vip$gmail.com (Please change '$' to '@').
 ==
 每个cpp文件的文件名中前边的数字代表着我做题的顺序，与题目本身、LeetCode网站等都没有关系
 --
-OTHERS_THINKING 代表我自己没想出来最好的解决办法，然后看了别人的解决思路之后，照着实现的
+OTHERS_IDEA 代表我自己没想出来最好的解决办法，然后看了别人的解决思路之后，照着实现的
 --
 NOT_GOOD 代表我所提供的解答可以在LeetCode上达到"Accept"的效果，但是明显不是好的解决办法
 --
