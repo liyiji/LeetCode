@@ -72,4 +72,8 @@ unsigned long long是一个 dirty fix
 一直是缝缝补补最后做出来一个Accept的结果。肯定还可以有更好的代码风格。
 
 ==
+105 Maximum Subarray
+
+题目里说，实现了O(n)的算法之后，还可以有更巧妙的分治法。但是我还没有实现。
+
 ==
