@@ -66,58 +66,6 @@ public:
             return;
         }
 
-        if (subMinIndices.size() == 1 && subMaxIndices.size() == 1)
-        {
-            if (subMinIndices[0] < subMaxIndices[0])
-            {
-                for (size_t i = subMinIndices[0]; i <= subMaxIndices[0]; i++)
-                {
-                    result[i] = i - subMinIndices[0] + 1;
-                }
-            }
-            else if (subMinIndices[0] > subMaxIndices[0])
-            {
-                for (size_t i = subMaxIndices[0]; i <= subMinIndices[0]; i++)
-                {
-                    result[i] = subMinIndices[0] - i + 1;
-                }
-            }
-            return;
-        }
-
-        if (subMinIndices.size() == 1)
-        {
-            if (subMaxIndices.size() != 2)
-                return;
-
-            for (size_t i = subMaxIndices[0]; i <= subMinIndices[0]; i++)
-            {
-                result[i] = subMinIndices[0] - i + 1;
-            }
-            for (size_t i = subMinIndices[0]; i <= subMaxIndices[1]; i++)
-            {
-                result[i] = i - subMinIndices[0] + 1;
-            }
-            return;
-        }
-
-        if (subMaxIndices.size() == 1)
-        {
-            if (subMinIndices.size() != 2)
-                return;
-
-            for (size_t i = subMinIndices[0]; i < subMaxIndices[0]; i++)
-            {
-                result[i] = i - subMinIndices[0] + 1;
-            }
-            for (size_t i = subMaxIndices[0] + 1; i <= subMinIndices[1]; i++)
-            {
-                result[i] = subMinIndices[1] - i + 1;
-            }
-            result[subMaxIndices[0]] = max(result[subMaxIndices[0] - 1], result[subMaxIndices[0] + 1]) + 1;
-            return;
-        }
-
         size_t subMinIndexIndex = 0;
         size_t subMaxIndexIndex = 0;
         while (subMinIndexIndex < subMinIndices.size() && subMaxIndexIndex < subMaxIndices.size())
