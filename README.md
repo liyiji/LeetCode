@@ -82,6 +82,10 @@ unsigned long long是一个 dirty fix
 排序的时候居然还要分批次，简直是写得太糟糕了........
 
 ==
+122 Longest Consecutive Sequence
+
+简直是太糟糕了，完全没有实现O(n)的复杂度，我忏悔，找时间再想吧……
+
 ==
 ==
 ==
