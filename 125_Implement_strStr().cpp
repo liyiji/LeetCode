@@ -63,7 +63,7 @@ public:
                     break;
                 }
             }
-            if (b || j == patternSize)
+            if (b)
             {
                 return haystack + i;
             }
