@@ -6,22 +6,11 @@
  *
  * Note: All inputs will be in lower-case.
  */
-bool shorterThan(pair<string, string> a, pair<string, string> b)
+bool lessThan(pair<string, string> a, pair<string, string> b)
 {
-    if (a.first.size() < b.first.size())
+    if (a.first < b.first)
         return true;
-    if (a.first.size() > b.first.size())
-        return false;
-    for (size_t i = 0; i < a.first.size(); i++)
-    {
-        if (a.first[i] < b.first[i])
-            return true;
-        else if (a.first[i] > b.first[i])
-            return false;
-        else
-            continue;
-    }
-    return true;
+    return false;
 }
 
 class Solution
@@ -41,7 +30,7 @@ public:
             pairs.push_back(make_pair(tmp, strs[i]));
         }
 
-        sort(pairs.begin(), pairs.end(), shorterThan);
+        sort(pairs.begin(), pairs.end(), lessThan);
 
         size_t it = 0;
         while (it + 1 < pairs.size())
