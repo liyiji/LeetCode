@@ -14,33 +14,58 @@
 class Solution
 {
 public:
-    int minDistance(string word1, string word2)
+    int numDistinct(string S, string T)
     {
-        if (word1.empty())
-            return word2.size();
-        if (word2.empty())
-            return word1.size();
-
-        size_t l1 = word1.size();
-        size_t l2 = word2.size();
-        vector < vector<size_t> > matrix(l1 + 1, vector < size_t > (l2 + 1, 0));
-        for (size_t i = 0; i <= l1; ++i)
+        int lengthDiff = S.size() - T.size();
+        if (lengthDiff < 0)
+            return 0;
+        if (lengthDiff == 0)
         {
-            matrix[i][0] = i;
-        }
-        for (size_t i = 0; i <= l2; ++i)
-        {
-            matrix[0][i] = i;
+            if (S == T)
+                return 1;
+            else
+                return 0;
         }
 
-        for (size_t i = 1; i <= l1; ++i)
+        vector<size_t> lastIndices;
+        int probe = T.size() - 1;
+        for (int i = S.size() - 1; i >= 0; i--)
         {
-            for (size_t j = 1; j <= l2; ++j)
+            if (S[i] == T[probe])
             {
-                matrix[i][j] = min(min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1), matrix[i - 1][j - 1] + ((word1[i - 1] == word2[j - 1]) ? 0 : 1));
+                lastIndices.push_back(i);
+                if (probe == 0)
+                    break;
+                probe--;
             }
         }
+        if (probe)
+            return 0;
 
-        return matrix[l1][l2];
+        reverse(lastIndices.begin(), lastIndices.end());
+
+        int result = getSub(S, 0, T, 0, lastIndices);
+        return result;
+    }
+
+    int getSub(const string &S, size_t startS, const string &T, size_t startT, const vector<size_t> &lastIndices)
+    {
+        if (startT >= T.size())
+            return 1;
+        else
+        {
+            if (startS >= S.size())
+                return 0;
+            else
+            {
+                int result = 0;
+                for (size_t i = startS; i <= lastIndices[startT]; i++)
+                {
+                    if (S[i] == T[startT])
+                        result += getSub(S, i + 1, T, startT + 1, lastIndices);
+                }
+                return result;
+            }
+        }
     }
 };
