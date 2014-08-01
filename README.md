@@ -82,5 +82,9 @@ unsigned long long是一个 dirty fix
 简直是太糟糕了，完全没有实现O(n)的复杂度，我忏悔，找时间再想吧……
 
 ==
+144 Median of Two Sorted Arrays
+
+虽然思路是没错的，但是总觉得代码写得跟一坨屎一样……
+
 ==
 ==
