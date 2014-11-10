@@ -7,6 +7,7 @@
  * top() -- Get the top element.
  * getMin() -- Retrieve the minimum element in the stack.
  */
+// Tips: Do NOT use std::vector. This will cause Memory Limit Exceeded. Use std::stack instead.
 class MinStack
 {
 public:
